@@ -1,0 +1,136 @@
+body {
+    color: #707070;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    
+}
+#main{
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    max-width: 800px;
+    margin: 40px auto;
+}
+header{
+    display: flex;
+}
+a {
+    text-decoration:none;
+}
+#header1{
+    
+}
+.profil{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 25px;
+    box-shadow: 0px 12px 6px rgba(0, 0, 0, 0.16);
+}
+#email-pres{
+    color:black;
+    opacity:0.8;
+}
+#special{
+    color: #fff;
+    background-color: #4585FF;
+    padding: 12px 4px 4px 12px;
+    font-size: 18px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16); 
+    border-radius: 10px;
+    margin-left: 15px;
+}
+#pres{
+    display:grid;
+
+}
+
+
+#header2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h1{
+    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 64px;
+}
+#email-pres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.drapeau img{
+    width: 56px;
+    height: 42px;
+}
+#pres{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+#boite1{
+    
+    display: flex;
+}
+.block-compet{
+    border-width :1px 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 4px;
+    width: 400px;
+    height: 80px;
+    margin: 0px 5px 5px 0px;
+    display: flex;
+    vertical-align: middle;
+}
+.block-lang{
+    border-width :1px 1px 1px 1px;
+    border-color: black;
+    border-style: solid;
+    border-radius: 4px;
+    width: 180px;
+    height: 70px;
+    margin: 0px 5px 5px 0px;
+    display: flex;
+    vertical-align: middle;
+    text-align: center;
+    
+}
+.chiffre{
+    width: 35%;
+    height: 100%;
+    font-size: 45px;
+    text-align: center;
+    
+      
+}
+#boite2{
+    
+    display: flex;
+} 
+
+.competence{
+    font-size: 15px;
+    width:60%;
+    height: 100%;
+    
+}
+
+#boite3{
+    display: flex;  
+}
+.block-exp{
+    border-width :0px;
+    border-color: black;
+    border-style: solid;
+    width: 240px;
+    height: 80px;
+    margin: 0px 7px 7px 0px;
+    display: flex;
+    
+}

@@ -83,74 +83,181 @@ header .user-data .role{
     width: 49%;
 }
 
+
 .section.skills .skills-list .skill-item .progress{
     font-size: 64px;
     margin-right: 10px;
 }
 
-.section.
-
-
-
-    
-section .boite-comptence{
-    
-    display: flex;
-    flex-wrap: wrap;
-    margin-top: 15px;
-}
-section .boite-comptence .block-competence{
-    
-    display: flex;
-    
+.langs .description{
+margin-top: 10px;
 }
 
-section .boite-comptence .block-competence  .chiffre{
-    width: 35%;
-    height: 100%;
-    font-size: 45px;
-    text-align: center;
-    
-      
-}
-section .boite-langue .block-langue{
-    border-width :1px 1px 1px 1px;
-    border-color: black;
-    border-style: solid;
-    border-radius: 4px;
-    margin: 10px 5px 5px 0px;
-    display: flex;
-}
-
-section .boite-langue{
-    
+.langs .langs-list{
     display: flex;
     justify-content: flex-start;
-
-} 
-
-section .boite-comptence .block-competence .competence{
-    font-size: 15px;   
-}
-
-section .boite-experience{
-    display: flex;  
-}
-section .boite-experience .block-experience{
-    border-width :0px;
-    border-color: black;
-    border-style: solid;
-    margin: 0px 7px 7px 0px;
-    display: flex;
     
 }
-section .boite-experience .block-experience hr{
-    width: 40px;
+
+.langs .langs-list .lang-item{
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    border: 1px solid #707070;
+    padding: 10px;
+    border-radius: 8px;
+}
+.langs .langs-list .lang-item span{
+    margin-left: 10px;
 }
 
-section .boite-experience .block-experience{
+.langs-list .lang-item .flag{
+    width: 50px;
+    height: 30px;
+    border-radius: 8px;
+}
+
+.skills .skill-item:hover,
+.langs .langs-list .lang-item:hover {
+    border: none;
+    background-color: #ACC2EA;
+    color: #fff;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+.expert .expert-list {
+    margin-top: 20px;
+    display: flex;
+}
+
+ .expert .expert-item {
+    margin-right: 20px;
+    width: 25%;
+}
+
+.expert .expert-item .tagline {
+    align-items: center;
+    display: flex;
+}
+
+.expert .expert-item .tagline .dot {
+    width: 20px;
+    height: 20px;
+    background-color: #707070;
+    border-radius: 50%;
+}
+
+.expert .expert-item .tagline hr {
+    width: calc(100% - 30px);
+    margin-left: 10px;
+    height: 2px;
+    border: none;
+    background-color: #707070;
+}
+
+.expert .expert-item .tag-data {
+    margin-top: 10px;
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.expert .expert-item:hover .tagline hr,
+.expert .expert-item:hover .dot {
+    background-color: #448E1D;
+    color: #448E1D;
+} */
+
+
+
+.form form {
+    margin-top: 10px;
+}
+
+.form .form-row {
+    display: flex;
+    margin-bottom: 20px;
+    justify-content: space-between;
+}
+
+.form .form-row .row-item {
+    width: 49%;
+}
+
+.form .input-email {
     margin-bottom: 20px;
 }
-section .block-langue{
-    margin-bottom: 20px;
+
+.form input:not([type=radio]), .form select, textarea {
+    width: 100%;
+    height: 53px;
+    border-radius: 8px; 
+    border: 1px solid #707070;
+    padding: 0px 12px;  
 }
+
+.form input:focus,
+.form input:focus-visible,
+.form input:focus-within,
+.form input::-moz-focus-inner {
+    border: 1px solid #4595F4;
+    outline: none;
+    outline-color: #4595F4;
+}
+
+.form .form-row .select{
+width: 49%;
+}
+
+.form .radios {
+    display: flex;
+    width: 49%;
+    align-items: center;
+}
+
+.form .radios .radio-bloc {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+}
+.form .radios input {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.form textarea {
+    height: auto;
+    padding: 12px;
+}
+
+.form .error-message {
+    margin-top: 10px;
+    color: #FF0000;
+    font-size: 16px;
+}
+
+.form .button .submit {
+    height: 53px;
+    border-radius: 8px;
+    background-color: #4595F4;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    border: none;
+    margin-top: 20px;
+    padding: 0px 25px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
+}
+
+.form .button .submit:hover {
+    background-color: #2680ee;
+}
+
+.copyright {
+    margin-top: 40px;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+

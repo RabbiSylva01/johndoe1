@@ -12,7 +12,7 @@
     "competence": 
         [
             {
-                "title": ">Github",
+                "title": "Github",
                 "description": "Gérer les différentes versions de mes projets",
                 "progress": "10%"
             },
@@ -32,10 +32,6 @@
     ,
     "langue":
     [
-       {
-        "description" : "je parle, écris et comprends les langues suivantes :"
-       },      
-       
         {
             "flag": "drapeau/us.png",
             "language": "anglais"
@@ -57,10 +53,8 @@
         }
     ]
     ,
-    "Experience": [
-        {
-            "description" : "Mon parcours au fil du temps"
-           },
+    "experience": [
+
         {
             "year": "2018",
             "role": "Étudiant"

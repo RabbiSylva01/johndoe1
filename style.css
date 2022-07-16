@@ -236,7 +236,7 @@ width: 49%;
     font-size: 16px;
 }
 
-.form .button .submit {
+.form .button .btn-submit {
     height: 53px;
     border-radius: 8px;
     background-color: #4595F4;
@@ -250,7 +250,7 @@ width: 49%;
     cursor: pointer;
 }
 
-.form .button .submit:hover {
+.form .button .btn-submit:hover {
     background-color: #2680ee;
 }
 
@@ -260,4 +260,58 @@ width: 49%;
     font-weight: 300;
 }
 
+.form i{
+    width:27px;
+    height: 27px;
+    position: absolute;
+    top: 15px;
+    right:10px;
+    visibility: hidden;
+}
+
+.form small{
+position: absolute;
+bottom: 0;
+left: 0;
+color: #FF0000;
+visibility: hidden;
+}
+
+.form .row-item, .mail, .select, .comment
+{
+  margin-bottom: 10px;
+  padding-bottom: 20px; 
+  position:relative 
+}
+
+.form .success input{
+border-color: #448E1D;
+visibility: visible;
+}
+
+.form .error input{
+border-color: #FF0000;
+visibility: visible;
+}
+
+.form-control.success i.fa-check-circle
+{
+color:#448E1D;
+visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle
+{
+color: #FF0000;
+visibility: visible;
+} 
+
+.form-control .error small
+{
+color: #FF0000;
+visibility: visible;
+ }
+
+
+   
 

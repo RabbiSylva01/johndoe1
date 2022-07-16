@@ -107,3 +107,52 @@ fetch('data.json')
   .catch(function(err) {
     // Une erreur est survenue
   });
+
+  const form = document.querySelector(".form1");
+  const nom = document.querySelector(".form1 .nom");
+  const middle= document.querySelector(".form1 .postnom");
+  const email= document.querySelector(".form1 .input-email");
+  const select = document.querySelector(".form1 .dropdown");
+  const comment = document.querySelector(".form1 .comment");
+
+  form.addEventListener('submit', e=> {
+    e.preventDefault();
+    checkInputs();
+  });
+
+  function checkInputs(){
+    //donner la valeur
+    const nomValue = nom.value.trim();
+    const middleValue = middle.value.trim();
+    const emailValue = email.value.trim();
+    const selectValue = select.value.trim();
+    const commentValue = comment.value.trim();
+
+    if(nomValue === ""){
+      //montre l'erreur
+      //ajouter la classe erreur
+      let message = "Le champ ne peut pas etre vide";
+      setErrorFor(nom, message);
+    }else if(nomValue.match(/^[a-zA-Z0-9]{5,30}$/)){
+        let message = "Le nom doit commencer par une lettre";
+        setErrorFor(nom, message);
+    }
+    else{
+     
+      //ajouter la classe succès
+      setSuccesFor(nomValue);
+    }
+
+  }
+
+  function setErrorFor(element, message) {
+    const formControl = element.parentElement;  //.row-item
+    const elementEmail = element.parentElement; //element-email
+    const dropdown = element.parentElement; //dropdown
+    const comment = element.parentElement; //comment
+    const small = formControl.querySelector('small');
+
+    small.innerText = message;
+    //ajouter la classe
+    formControl.className= 'form-control error';
+  }

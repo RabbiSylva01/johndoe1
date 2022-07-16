@@ -6,6 +6,8 @@
     <title>Document title</title>
     
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/all.css">
+    
 </head>
 
 <body>
@@ -64,28 +66,38 @@
         <section class="section form">
             <h2 class="section-title">Me contacter</h3>
             <p class="section-description">Entrez en contact avec moi via ce formulaire</p>
-            <form>
+            <form class="form1">
                 <div class="form-row">
-                    <div class="name row-item">
-                        <input type="text" placeholder="Entrez votre nom" class="nom" required>
+                    <div class="name row-item form-control">
+                        <input type="text" placeholder="Entrez votre nom" class="nom">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
                     </div>
-                    <div class="middle row-item">
-                        <input type="text" placeholder="Entrez votre postnom" class="postnom" required>
+                    <div class="middle row-item form-control">
+                        <input type="text" placeholder="Entrez votre postnom" class="postnom">
+                        <i class="fas fa-check-circle"></i>
+                        <i class="fas fa-exclamation-circle"></i>
+                        <small>Error message</small>
                     </div>
                 </div>
-                <div class="mail">
-                    <input type="email" placeholder="Entrez votre email" class="input-email" required>
+                <div class="mail form-control">
+                    <input type="email" placeholder="Entrez votre email" class="input-email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 </div>
                 <div class="form-row">
-                    <div class="select">
-                        <select name="dropdown" id="dropdown" placeholder="Sélectionner l'objet de votre demande">
-                            <optgroup label="Sélectionner l'objet de votre demande" />
+                    <div class="select form-control">
+                        <select name="dropdown" class="dropdown" placeholder="Sélectionner l'objet de votre demande" required>
+                            <optgroup label="Sélectionner l'objet de votre demande"/>
                             <option value="objet1">objet1</option>
                             <option value="objet1">objet1</option>
                             <option value="objet1">objet1</option>
                             <option value="objet1">objet1</option>
                             <option value="objet1">objet1</option>
                         </select>
+                        <small>Error message</small>
                     </div>
     
                      <div class="radios">
@@ -100,13 +112,15 @@
                     </div>
                 </div>
 
-                <div class="comment">
-                    <textarea id="comment" i name="w3review" rows="7" cols="89">   
+                <div class="comment form-control">
+                    <textarea class="comment" i name="w3review" rows="7" cols="89">   
                     </textarea><br />
-                </div>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <small>Error message</small>
                 <p class="error-message">*ce champ est obligatoire</p>
                 <div class="button">
-                    <button type="submit" class="submit" form="form1" value="Submit" class="submit">Envoyer</button>
+                    <button type="submit" class="btn-submit">Envoyer</button>
                 </div>
             </form>
         </section>
@@ -118,6 +132,7 @@
         </footer>
     </div>
     <script src="script.js"></script>
+    
 </body>
 
 </html>

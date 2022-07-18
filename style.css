@@ -306,11 +306,12 @@ color: #FF0000;
 visibility: visible;
 } 
 
-.form-control .error small
+.form-control.error small
 {
 color: #FF0000;
 visibility: visible;
  }
+ 
 
 
    

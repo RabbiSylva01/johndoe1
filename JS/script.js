@@ -220,26 +220,17 @@ function verify_radios() {
     }
 
 function verify_select() {
-  var valide = false;
-    for (i = 0; i < select.options.length; i++)
-    {
-       if (select.options[i].selected === true)
-        {
-         valide = true;
-         break;
-        }
-    }
-    if(!valide){
-      let message = "sélectionne un objet";
-      setErrorFor(select, message);
-      return false;
-    }
-    else{
-      setSuccesFor(select);
-      return true;     
+  var selectValue = select.options[select.selectedIndex].value;
+  if(selectValue == "objet")
+  {
+    let message = "veuillez choisir un objet"
+    setErrorFor(select, message);
+  }
+  else{
+    setSuccesFor(select);
+  }
 }
 
-}
 function verify_comment() {
   let letterCommentNum = commentValue.length;
   if (commentValue === "") {

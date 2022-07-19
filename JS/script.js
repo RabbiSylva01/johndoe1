@@ -119,6 +119,7 @@ const middle = document.querySelector(".postnom");
 const email = document.querySelector(".input-email");
 const select = document.querySelector(".dropdown");
 const comment = document.querySelector(".commentaire");
+const radios = document.querySelectorAll(".radio");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -130,12 +131,15 @@ function checkInputs() {
   const nomValue = nom.value.trim();
   const middleValue = middle.value.trim();
   const emailValue = email.value.trim();
-  const selectValue = select.value.trim();
+  const selectValue = select.value;
   const commentValue = comment.value.trim();
+ 
   verify_name();
   verify_middle();
   verify_mail();
-
+  verify_radios();
+  verify_select();
+  verify_comment();
   //verifier nom
   function verify_name() {
     let letterNameNum = nomValue.length;
@@ -157,6 +161,7 @@ function checkInputs() {
       setSuccesFor(nom);
     }
   }
+
   function verify_middle() {
     let letterMiddleNum = middleValue.length;
     // VERIFIER POSTNOM
@@ -194,6 +199,60 @@ function checkInputs() {
     }
   }
   
+function verify_radios() {
+    var valid = false;
+    for (i = 0; i < radios.length; i++)
+    {
+       if (radios[i].checked)
+        {
+         valid = true;
+         break;
+        }
+        
+    }
+    if(valid){
+      return true;
+    }
+    else{
+    alert("Veuillez choisir un genre: Homme ou Femme");
+    return false;
+}
+    }
+
+function verify_select() {
+  var valide = false;
+    for (i = 0; i < select.options.length; i++)
+    {
+       if (select.options[i].selected === true)
+        {
+         valide = true;
+         break;
+        }
+    }
+    if(!valide){
+      let message = "sélectionne un objet";
+      setErrorFor(select, message);
+      return false;
+    }
+    else{
+      setSuccesFor(select);
+      return true;     
+}
+
+}
+function verify_comment() {
+  let letterCommentNum = commentValue.length;
+  if (commentValue === "") {
+    
+    let message = "Le champ ne peut pas etre vide";
+    setErrorFor(comment, message);
+  } else if (letterCommentNum < 10 || letterCommentNum> 200) {
+    let message = "Le commmentaire doit avoir entre 10 et 20 caractères";
+    setErrorFor(comment, message);
+  }else{
+    setSuccesFor(comment);
+  }
+}
 }
 
 //ajouter la fonction error
@@ -211,6 +270,7 @@ function setErrorFor(elem, message) {
 function setSuccesFor(elem) {
   const formControl = elem.parentElement;
   formControl.classList.add("success");
+  formControl.classList.remove("error");
 }
 function Verify(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -1,4 +1,4 @@
-fetch("JS/data.json")
+fetch("js/data.json")
   .then(function (res) {
     if (res.ok) {
       return res.json();
@@ -119,7 +119,8 @@ const middle = document.querySelector(".postnom");
 const email = document.querySelector(".input-email");
 const select = document.querySelector(".dropdown");
 const comment = document.querySelector(".commentaire");
-const radios = document.querySelectorAll(".radio");
+const radio = document.querySelectorAll(".radio");
+const radios = document.querySelector(".radios.form-control");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -137,9 +138,9 @@ function checkInputs() {
   verify_name();
   verify_middle();
   verify_mail();
-  verify_radios();
   verify_select();
   verify_comment();
+  verify_radios();
   //verifier nom
   function verify_name() {
     let letterNameNum = nomValue.length;
@@ -199,25 +200,26 @@ function checkInputs() {
     }
   }
   
-function verify_radios() {
-    var valid = false;
-    for (i = 0; i < radios.length; i++)
+  function verify_radios() {
+    var valid= false;
+    for (i = 0; i < radio.length; i++)
     {
-       if (radios[i].checked)
+       if (radio[i].checked)
         {
          valid = true;
-         break;
         }
         
     }
-    if(valid){
-      return true;
+    if(!valid){
+      let message = "Veuillez choisir un genre: Homme ou Femme";
+      setErrorForRadios(radios, message);
     }
     else{
-    alert("Veuillez choisir un genre: Homme ou Femme");
-    return false;
-}
+    setSuccesForRadios(radios);
     }
+    }
+
+    
 
 function verify_select() {
   var selectValue = select.options[select.selectedIndex].value;
@@ -263,7 +265,24 @@ function setSuccesFor(elem) {
   formControl.classList.add("success");
   formControl.classList.remove("error");
 }
+
 function Verify(email) {
   const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   return re.test(email);
+}
+
+function setErrorForRadios(elem, message) {
+  const formControl = elem; //.form-control
+
+  const small = formControl.querySelector("small");
+
+  small.innerText = message;
+  //ajouter la classe
+  formControl.classList.add("error");
+}
+
+function setSuccesForRadios(elem) {
+  const formControl = elem;
+  formControl.classList.add("success");
+  formControl.classList.remove("error");
 }

@@ -273,7 +273,7 @@ color: #FF0000;
 visibility: hidden;
 }
 
-.form .row-item, .mail, .select, .comment
+.form .row-item, .mail, .select, .comment, .radios
 {
   margin-bottom: 10px;
   padding-bottom: 20px; 
